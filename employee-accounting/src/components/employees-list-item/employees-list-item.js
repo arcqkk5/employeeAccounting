@@ -19,9 +19,7 @@ const EmployeesListItem = ({
 
   return (
     <li className={classNames}>
-      <span className="list-group-item-label" onClick={onToggleLike}>
-        {name}
-      </span>
+      <span className="list-group-item-label">{name}</span>
       <input
         type="text"
         className="list-group-item-input"
@@ -39,7 +37,7 @@ const EmployeesListItem = ({
         <button type="button" className="btn-trash btn-sm " onClick={onDelete}>
           <i className="fas fa-trash"></i>
         </button>
-        <i className="fas fa-star"></i>
+        <i className="fas fa-star" onClick={onToggleLike}></i>
       </div>
     </li>
   );
